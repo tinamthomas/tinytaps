@@ -36,13 +36,15 @@ function SelectableCard(props) {
             image={image}
             alt={title}
             sx={{
-              objectFit: 'cover',
+              objectFit: 'contain',
               objectPosition: 'center',
               width: '100%',
               height: '220px',
               flexShrink: 0,
               transition: 'all 0.3s ease',
               filter: 'brightness(1.1) saturate(1.1)',
+              backgroundColor: '#f8fafc',
+              padding: '1rem',
             }}
           />
         ) : (
