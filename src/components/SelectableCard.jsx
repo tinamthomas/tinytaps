@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 function SelectableCard(props) {
-    const { title, description, image } = props;
+    const { title, description, image, defaultImage } = props;
     const [show, setShow] = useState(false);
 
     return (
@@ -15,7 +15,7 @@ function SelectableCard(props) {
         <CardMedia
           component="img"
           height="200"
-          image={show ? image : ''}
+          image={show ? image : defaultImage}
           alt={title}
           sx={{
             objectFit: 'contain',
@@ -23,7 +23,6 @@ function SelectableCard(props) {
             width: '100%',
             height: '200px',
             backgroundColor: 'grey.100',
-            visibility: show ? 'visible' : 'hidden'
           }}
         />
         <CardContent>
