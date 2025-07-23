@@ -2,5 +2,5 @@ fileignoreconfig:
 - filename: public/vite.svg
   checksum: 5fe742fa65b1dea8626174e639646dd7665eb5976ae9caa62855bc9bb33aeeb0
 - filename: package-lock.json
-  checksum: 850e7322aeb389fbc0c9d24137d76c49f817be66260d72122dabbc596af02cd1
+  checksum: e2ef40efdeaba2a61e7cc4042b23db2a46b11438f0bdfad058ec19c89b6753b8
 version: "1.0"
