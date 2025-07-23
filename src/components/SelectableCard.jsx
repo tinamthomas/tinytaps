@@ -1,25 +1,29 @@
 import Card from '@mui/material/Card';
+import { useState } from 'react';
 import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-
 function SelectableCard(props) {
     const { title, description, image } = props;
+    const [show, setShow] = useState(false);
+
     return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => setShow(!show)}>
         <CardMedia
           component="img"
           height="200"
-          image={image}
+          image={show ? image : ''}
           alt={title}
           sx={{
             objectFit: 'contain',
             objectPosition: 'center',
             width: '100%',
-            backgroundColor: 'grey.100'
+            height: '200px',
+            backgroundColor: 'grey.100',
+            visibility: show ? 'visible' : 'hidden'
           }}
         />
         <CardContent>
@@ -30,6 +34,7 @@ function SelectableCard(props) {
             {description}
           </Typography>
         </CardContent>
+
       </CardActionArea>
     </Card>
     );
