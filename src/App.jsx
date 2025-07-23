@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import SelectableCard from './components/SelectableCard'
+import CardSet from './components/CardSet'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <SelectableCard title="Bunny" description="Hop litte bunny hop hop hop" image="/images/bunny.jpg" />
+      <CardSet />
     </>
   )
 }

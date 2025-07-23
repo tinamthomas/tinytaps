@@ -3,4 +3,6 @@ fileignoreconfig:
   checksum: 5fe742fa65b1dea8626174e639646dd7665eb5976ae9caa62855bc9bb33aeeb0
 - filename: package-lock.json
   checksum: e2ef40efdeaba2a61e7cc4042b23db2a46b11438f0bdfad058ec19c89b6753b8
+- filename: src/components/CardSet.jsx
+  checksum: 4e958b3adb768c55b530446acc6b41f46a4a1a8f70627f93ce2fff403be34219
 version: "1.0"
