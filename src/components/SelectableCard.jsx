@@ -12,9 +12,15 @@ function SelectableCard(props) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image={image}
-          alt="green iguana"
+          alt={title}
+          sx={{
+            objectFit: 'contain',
+            objectPosition: 'center',
+            width: '100%',
+            backgroundColor: 'grey.100'
+          }}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
