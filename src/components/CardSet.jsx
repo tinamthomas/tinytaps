@@ -5,7 +5,7 @@ function CardSet(props) {
     const cards = [
         {
             title: 'Bunny',
-            description: 'Hop litte bunny hop hop hop',
+            description: 'Hop little bunny hop hop hop',
             image: '/images/bunny.jpg'
         },
         {
@@ -29,7 +29,7 @@ function CardSet(props) {
             image: '/images/strawberry.jpg'
         }, 
         {
-            title: 'Turtle ',
+            title: 'Turtle',
             description: 'Slow slow slow',
             image: '/images/turtle.jpg'
         },
@@ -51,13 +51,25 @@ function CardSet(props) {
       sx={{
         width: '100%',
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))',
-        gap: 2,
+        gridTemplateColumns: {
+          xs: 'repeat(auto-fill, minmax(300px, 1fr))',
+          sm: 'repeat(auto-fill, minmax(320px, 1fr))',
+          md: 'repeat(auto-fill, minmax(320px, 1fr))',
+          lg: 'repeat(auto-fill, minmax(350px, 1fr))',
+        },
+        gap: { xs: 2, sm: 3, md: 3 },
+        alignItems: 'stretch',
+        justifyItems: 'stretch',
       }}
     >
         {cards.map((card, index) => (
-            <SelectableCard key={card.title} title={card.title} description={card.description} image={card.image} 
-            defaultImage={index % 2 === 0 ? "/images/card-back-1.jpg" : "/images/card-back-2.jpg"} />
+            <SelectableCard 
+              key={card.title} 
+              title={card.title} 
+              description={card.description} 
+              image={card.image} 
+              defaultImage={index % 2 === 0 ? "/images/card-back-1.jpg" : "/images/card-back-2.jpg"}
+            />
         ))}
         </Box>
     </>
