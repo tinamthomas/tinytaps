@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 function SelectableCard(props) {
-    const { title, description, image, defaultImage } = props;
+    const { title, description, image } = props;
     const [show, setShow] = useState(false);
 
     return (
@@ -27,24 +27,57 @@ function SelectableCard(props) {
           flexDirection: 'column',
           alignItems: 'stretch'
         }}
-      >
-        <CardMedia
-          component="img"
-          height="220"
-          image={show ? image : defaultImage}
-          alt={title}
-          sx={{
-            objectFit: show ? 'cover' : 'contain',
-            objectPosition: 'center',
-            width: '100%',
-            height: '220px',
-            flexShrink: 0,
-            transition: 'all 0.3s ease',
-            filter: show ? 'brightness(1.1) saturate(1.1)' : 'brightness(1) saturate(1)',
-            backgroundColor: show ? 'transparent' : '#f8fafc',
-            padding: show ? 0 : '1rem',
-          }}
-        />
+      > 
+        {show ? (
+          <CardMedia
+            component="img"
+            height="220"
+            image={image}
+            alt={title}
+            sx={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+              width: '100%',
+              height: '220px',
+              flexShrink: 0,
+              transition: 'all 0.3s ease',
+              filter: 'brightness(1.1) saturate(1.1)',
+            }}
+          />
+        ) : (
+          <div
+            sx={{
+              width: '100%',
+              height: '220px',
+              flexShrink: 0,
+              transition: 'all 0.3s ease',
+              backgroundColor: '#f8fafc',
+              backgroundImage: `
+                linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+                linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+                linear-gradient(-45deg, transparent 75%, #e2e8f0 75%)
+              `,
+              backgroundSize: '20px 20px',
+              backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+            }}
+            style={{
+              width: '100%',
+              height: '220px',
+              flexShrink: 0,
+              transition: 'all 0.3s ease',
+              backgroundColor: '#f8fafc',
+              backgroundImage: `
+                linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+                linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+                linear-gradient(-45deg, transparent 75%, #e2e8f0 75%)
+              `,
+              backgroundSize: '20px 20px',
+              backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+            }}
+          />
+        )}
         <CardContent sx={{ 
           flex: 1, 
           display: 'flex', 

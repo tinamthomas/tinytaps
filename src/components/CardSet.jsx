@@ -68,7 +68,6 @@ function CardSet(props) {
               title={card.title} 
               description={card.description} 
               image={card.image} 
-              defaultImage={index % 2 === 0 ? "/images/card-back-1.jpg" : "/images/card-back-2.jpg"}
             />
         ))}
         </Box>
