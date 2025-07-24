@@ -43,6 +43,16 @@ function CardSet(props) {
             description: 'Roar roar roar',
             image: '/images/tiger.jpg'
         },
+        {
+            title: 'Dog',
+            description: 'Woof woof woof',
+            image: '/images/dog.jpg'
+        },
+        {
+            title: 'Cow',
+            description: 'Moo moo moo',
+            image: '/images/cow.jpg'
+        }
         
     ];
     return (
