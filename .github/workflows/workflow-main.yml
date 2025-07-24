@@ -19,3 +19,4 @@
          with:
            name: coverage
            path: coverage/
+           retention-days: 1
