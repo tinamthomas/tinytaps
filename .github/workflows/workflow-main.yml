@@ -14,3 +14,8 @@
          run: npm install
        - name: Run tests
          run: npm test -- --coverage
+       - name: Upload artifact
+         uses: actions/upload-artifact@v3
+         with:
+           name: coverage
+           path: coverage/
