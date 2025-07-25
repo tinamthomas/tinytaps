@@ -1,7 +1,7 @@
 import './App.css'
 import { AppBar, Toolbar, Typography, Container, Box, Button, IconButton, useTheme, useMediaQuery } from '@mui/material'
 import { Menu as MenuIcon } from '@mui/icons-material'
-import { Outlet } from 'react-router'
+import { Outlet, Link } from 'react-router'
 
 function App() {
   const theme = useTheme()
@@ -49,7 +49,7 @@ function App() {
                     }
                   }}
                 >
-                  Home
+                  <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Home</Link>
                 </Button>
                 <Button 
                   color="inherit" 
@@ -60,7 +60,7 @@ function App() {
                     }
                   }}
                 >
-                  About
+                  <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link>
                 </Button>
                 <Button 
                   color="inherit" 
