@@ -1,7 +1,7 @@
 import './App.css'
 import { AppBar, Toolbar, Typography, Container, Box, Button, IconButton, useTheme, useMediaQuery } from '@mui/material'
 import { Menu as MenuIcon } from '@mui/icons-material'
-import CardSet from './components/CardSet'
+import { Outlet } from 'react-router'
 
 function App() {
   const theme = useTheme()
@@ -129,7 +129,7 @@ function App() {
             border: '1px solid rgba(255, 255, 255, 0.2)'
           }}
         >
-          <CardSet />
+          <Outlet />
         </Box>
       </Container>
     </Box>
