@@ -132,7 +132,7 @@ const cards = {
         {
             title: 'Blackberry',
             description: 'Black black black',
-            image: '/images/fruits/blackberry.jpg'
+            image: '/images/fruits/blackberries.jpg'
         },    ]
 };
 
