@@ -2,7 +2,7 @@ fileignoreconfig:
 - filename: public/vite.svg
   checksum: 5fe742fa65b1dea8626174e639646dd7665eb5976ae9caa62855bc9bb33aeeb0
 - filename: package-lock.json
-  checksum: ca779b5466b6508864f9dbd65781c2fe22cab577b0d7e88c5f8779fb6ab6d0da
+  checksum: 024bdded823dcdf9bb79534d747f3b9f897ffebac229f0d6385c0ee3251e9a6a
 - filename: src/components/CardTapAndReveal.jsx
-  checksum: 67e66fac07f149101ea5f090812bfe38e6be3e27a345250ef8513682a974d0ab
+  checksum: af2fd95e0b2a9150a50f57a842bf458a924087e9c51c707fc06e458c760eebc3
 version: "1.0"
