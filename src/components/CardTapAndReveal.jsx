@@ -28,6 +28,7 @@ function CardTapAndReveal() {
               <Box
             sx={{
               width: '100%',
+              marginTop: 3,
               display: 'grid',
               gridTemplateColumns: {
                 xs: 'repeat(auto-fill, minmax(300px, 1fr))',
